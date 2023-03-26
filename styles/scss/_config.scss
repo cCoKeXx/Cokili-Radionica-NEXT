@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+$darkBlue:#183951;
+$mediumBlue:#71ABDE;
+$lightBlue: #B7EDFF;
+$yellow: #FFD348;
+$darkGray: #616161;
+
+$normalText: 1.313rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Shadows+Into+Light&display=swap');;
+
+@keyframes lineUnder{
+    0%{
+        width:0;
+    };
+
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes navbar{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes bounce{
+    0%,100% {
+        transform: translate(0px, -10px) rotate(-12deg);
+   }
+   50%{
+    transform: translate(0px, 10px) rotate(-12deg);
+   }
+}
+@keyframes fly{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes cloud{
+    0%{
+        
+    }
+    100%{
+        left: 100%
+    }
+}
+
+
+.btn{
+    background-color: $yellow;
+    border: none;
+    padding: 1rem 2rem;
+    min-width: 4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    &:hover{
+        background-color: darken($color: $yellow, $amount: 10);
+    }
+}
+
+.navbar-white-color{
+    color:white !important;
+    
+}
+.navbar-nonFixed{
+    position: relative;
+    background: rgb(255, 255, 255);
+}
+.navbar-white-background{
+    background-color: white !important;
+    
+}

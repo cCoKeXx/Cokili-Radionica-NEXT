@@ -1,0 +1,130 @@
+nav {
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  color: $darkBlue;
+  background: transparent;
+  transition: color 1s ease-in-out;
+  animation-name: navbar;
+  animation-duration: 1s;
+  .cart-icon {
+    font-size: 32px;
+    color: $darkBlue;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 5%;
+    transition: transform 0.4s ease;
+    border: none;
+    background-color: transparent;
+    transition: color 1s ease-in-out;
+    &:hover {
+      transform: scale(1.05, 1.05);
+    }
+  }
+  .cart-item-qty {
+    position: absolute;
+    right: -8px;
+    font-size: 12px;
+    color: #eee;
+    background-color: #f02d34;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 2px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+  }
+
+  .hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    transition: color 1s ease-in-out;
+  }
+
+  .navbar-link {
+    cursor: pointer;
+  }
+  .underline-active {
+    width: 100%;
+    margin: 0 auto;
+    height: 0.1rem;
+    background-color: $darkBlue;
+    animation: lineUnder;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+  }
+}
+
+.navbar-menu {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  background-image: url("/Navbar/phoneMenuBackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: rgba(82, 82, 82, 0.598);
+  border-radius: 0 10px 10px 0;
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+  .menu-close {
+    text-align: right;
+  }
+  button {
+    background: transparent;
+    border: none;
+    margin: 0.3rem 0;
+    z-index: 2;
+  }
+  .navbar-menu-link {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    height: 3rem;
+    justify-content: flex-start;
+    .navbar-link {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+    .navbar-menu {
+      .navbar-menu-link {
+        font-size: 24px;
+      }
+    }
+  }
+}

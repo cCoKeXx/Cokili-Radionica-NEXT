@@ -1,0 +1,167 @@
+.slug {
+  background: rgb(237,241,244);
+  background: linear-gradient(248deg, #edf1f4 0%, #c3cbdc 100%);
+  min-height: 100vh;
+  padding-top: 5rem;
+  position: relative;
+  .background{
+    width: 100%;
+    min-height: 120%;
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    object-fit: cover;
+  }
+  .product-detail-container {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: #324d67;
+    .product-detail-image {
+      border-radius: 15px;
+      background-color: #ebebeb;
+      width: 400px;
+      height: 400px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      object-fit: cover;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      &:hover {
+        background-color: #f02d34;
+      }
+    }
+    .small-images-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      .small-image {
+        border-radius: 8px;
+        background-color: #ebebeb;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        object-fit: cover;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .selected-image {
+        background-color: #f02d34;
+      }
+    }
+    .product-detail-desc {
+      h1{
+        font-size: 2.2rem;
+        &::first-letter{
+          text-transform: capitalize;
+        }
+      }
+
+      h4 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+      .desc{
+        max-width: 35rem;
+        font-weight: 600;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        &::first-letter{
+          text-transform: capitalize;
+        }
+      }
+      p {
+        margin-top: 10px;
+       
+      }
+      .price {
+        font-weight: 700;
+        font-size: 26px;
+        margin-top: 30px;
+        color: #f02d34;
+      }
+      .quantity {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+        align-items: center;
+        .quantity-desc {
+          border: 1px solid gray;
+          background-color: white;
+          padding: 6px;
+          span {
+            font-size: 16px;
+            padding: 6px 12px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          }
+          .minus {
+            color: #f02d34;
+          }
+          .num {
+            border: 1px solid gray;
+            font-size: 20px;
+          }
+          .plus {
+            color: rgb(49, 168, 49);
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 30px;
+        .buy-now {
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          width: 200px;
+          padding: 10px 20px;
+          background-color: #f02d34;
+          color: white;
+          border: none;
+          margin-top: 40px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          transform: scale(1, 1);
+          transition: transform 0.5s ease;
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and ( max-width: 1024px){
+  .product-detail-container{
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+  }
+}
+@media only screen and ( max-width: 768px ){
+  .product-detail-container{
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin: 3rem 0 0 0 !important;
+    .product-detail-desc{
+      padding: 0 2rem !important;
+    }
+  }
+ 
+}
+@media only screen and ( max-width: 480px ){
+  .product-detail-container{
+    .product-detail-image{
+      width: 80vw !important;
+      height: 80vw !important;
+    }
+    margin: 3rem 1rem 1rem 1rem !important;
+    .product-detail-desc{
+      padding: 0 !important;
+      .buy-now{
+        margin-left:auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
